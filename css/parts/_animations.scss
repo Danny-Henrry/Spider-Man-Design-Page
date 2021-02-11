@@ -1,0 +1,25 @@
+.logo-spiderman-loader{
+    fill: transparent;
+    animation: logo-spiderman-loader 5s ease-out forwards;
+}
+
+@keyframes logo-spiderman-loader {
+    0%{
+        stroke-width: 0;
+        width: auto;
+        stroke-dasharray: 1 100;
+        fill: transparent;
+    }
+    
+    25%{
+        stroke-width: 1;
+        fill: transparent;
+        stroke-dasharray: 100 1;
+    }
+    
+    60%, 100%{
+        width: 296px;
+        stroke-width: 0.3;
+        fill: $white-dark;
+    }
+}

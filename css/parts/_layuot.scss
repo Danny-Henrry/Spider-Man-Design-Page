@@ -4,7 +4,7 @@ html{
 
 .container{
     max-width: 1440px;
-    height: 100vh;
+    height: 85vh;
     margin: 0 auto;
     padding: 36px 16px;
     display:flex;
@@ -13,16 +13,16 @@ html{
     //overflow: hidden; <=======//
 }
 
-body{
-    background: url('../../img/background.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: brightness(20%) blur(10px);
-}
+// body{
+//     background: url('../../img/background.jpg') no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     backdrop-filter: brightness(20%) blur(10px);
+// }
 
 .container-item_1{
 
-    width: 100%;
+    width: 70%;
 
     p{
         margin-top: 1rem;
@@ -38,7 +38,7 @@ body{
 }
 
 .container-item_2{
-    max-width: 576px;
+    //max-width: 576px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -102,7 +102,7 @@ body{
 }
 
 .btn-secondary{
-    transition: all .7s ease 0s;
+    transition: all .7s ease-out 0s;
     display: inline-block;
     padding:10px 32px;
     border-radius: 3px;
@@ -133,7 +133,49 @@ body{
 
 }
 
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    z-index: -1;
+    overflow: hidden;
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        background: linear-gradient(101.47deg, #0A0C10 26.38%, rgba(10, 12, 16, 0.8) 50.07%, #0A0C10 73.17%);
+    }
+}
+
+.bg-loader{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(255deg, $red 0%, $red-dark 100%);
+}
+
 @media only screen and (max-width: 992px){
+
+    body{
+        overflow: auto;
+    }
 
     .container{
         flex-direction: column;
