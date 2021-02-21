@@ -24,6 +24,11 @@ html{
 
     width: 70%;
 
+    .item-3{
+        position: relative;
+        z-index: 20;
+    }
+
     p{
         margin-top: 1rem;
     }
@@ -148,7 +153,7 @@ html{
     &::after{
         content: "";
         width: 100%;
-        height: 100%;
+        height: 102%;
         position: absolute;
         top: 0;
         left: 0;
@@ -161,7 +166,7 @@ html{
     overflow: hidden;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10000;
@@ -181,12 +186,23 @@ html{
         flex-direction: column;
         overflow: hidden;
         height: auto;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .container-item_1{
         order: 1;
         width: 85%;
         margin: 0;
+
+        .img-name-logo{
+            text-align: center;
+
+            .img-logo-spider{
+                width: 60%;
+            }
+        }
+
     }
     .container-item_2{
         margin-top: 20px;
@@ -219,10 +235,6 @@ html{
 @media only screen and (max-width:399px){
 
     .container-item_1{
-        
-        p{
-            text-align: center;
-        }
 
         p:nth-of-type(2){
             text-align: left;
