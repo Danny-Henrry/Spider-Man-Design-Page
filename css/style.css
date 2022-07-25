@@ -576,8 +576,8 @@ header {
 
 .logo-spiderman-loader {
   fill: transparent;
-  -webkit-animation: logo-spiderman-loader 5s ease-out forwards;
-          animation: logo-spiderman-loader 5s ease-out forwards;
+  -webkit-animation: logo-spiderman-loader 5s ease-out alternate;
+          animation: logo-spiderman-loader 5s ease-out alternate;
 }
 
 @-webkit-keyframes logo-spiderman-loader {
